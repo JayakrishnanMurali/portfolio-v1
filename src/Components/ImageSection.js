@@ -52,18 +52,18 @@ const ImageSectionStyled = styled.div`
   position: relative;
   .right-content {
     width: 100%;
+    margin-left: 2rem;
     img {
-      width: 90%;
-      height: 17rem;
+      width: 70%;
+      height: 13rem;
       object-fit: cover;
     }
     .img-border {
-      width: 40%;
-      height: 17rem;
+      width: 30%;
+      height: 13rem;
       z-index: -1;
-      right: 20px;
-      top: 20px;
-      height: 17rem;
+      right: 105px;
+      top: 25px;
       border: 2px solid var(--primary-color);
       position: absolute;
     }
@@ -71,7 +71,7 @@ const ImageSectionStyled = styled.div`
   .left-content {
     .paragraph {
       padding: 0.5rem 0;
-      font-size: 0.918rem;
+      font-size: 0.868rem;
       .flex {
         display: flex;
         align-items: center;
@@ -82,13 +82,13 @@ const ImageSectionStyled = styled.div`
         margin-right: 2rem;
         padding-left: 1rem;
         li {
-          font-size: 0.858rem;
+          font-size: 0.868rem;
           list-style: circle;
           color: var(--primary-color);
 
           span {
             color: var(--font-light-color);
-            font-size: 0.858rem;
+            font-size: 0.768rem;
           }
         }
       }

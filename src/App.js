@@ -8,8 +8,8 @@ import HomePage from "./Pages/HomePage";
 import AboutPage from "./Pages/AboutPage";
 import ResumePage from "./Pages/ResumePage";
 import ProjectsPage from "./Pages/ProjectsPage";
-import BlogsPage from "./Pages/BlogsPage";
 import ContactPage from "./Pages/ContactPage";
+import OtherWorks from "./Pages/OtherWorks";
 
 function App() {
   return (
@@ -17,12 +17,12 @@ function App() {
       <BrowserRouter>
         <Sidebar />
         <MainContentStyled>
-          <div className="lines">
+          {/* <div className="lines">
             <div className="line-1"></div>
             <div className="line-2"></div>
             <div className="line-3"></div>
             <div className="line-4"></div>
-          </div>
+          </div> */}
 
           <Switch>
             <Route path="/" exact>
@@ -37,8 +37,8 @@ function App() {
             <Route path="/resume" exact>
               <ResumePage />
             </Route>
-            <Route path="/blogs" exact>
-              <BlogsPage />
+            <Route path="/other-works" exact>
+              <OtherWorks />
             </Route>
             <Route path="/contact" exact>
               <ContactPage />
@@ -55,7 +55,7 @@ const MainContentStyled = styled.main`
   margin-left: 16.3rem;
   min-height: 100vh;
 
-  .lines {
+  /* .lines {
     position: absolute;
     min-height: 100vh;
     width: 100%;
@@ -70,7 +70,7 @@ const MainContentStyled = styled.main`
       min-height: 100vh;
       background-color: var(--border-color);
     }
-  }
+  } */
 `;
 
 export default App;

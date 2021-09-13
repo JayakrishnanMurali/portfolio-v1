@@ -27,7 +27,8 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     /* list-style: none; */
     text-decoration: none;
-    font-family: 'Nunito', sans-serif;
+    /* font-family: 'Nunito', sans-serif; */
+    font-family: 'Sora', sans-serif;
     font-size: 1.2rem;
 }
 

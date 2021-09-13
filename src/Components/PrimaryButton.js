@@ -13,15 +13,22 @@ const PrimaryButtonStyled = styled.a`
   display: inline-block;
   font-style: inherit;
   position: relative;
+  transition: all 0.4s ease-in-out;
 
-  &:hover::after {
+  &:after {
     content: "";
     position: absolute;
-    width: 100%;
+    width: 0;
     height: 0.25rem;
-    background-color: var(--white-color);
+    transition: all 0.4s ease-in-out;
     left: 0;
     bottom: 0;
+    opacity: 0.7;
+  }
+
+  &:hover::after {
+    width: 100%;
+    background-color: var(--white-color);
   }
 `;
 
