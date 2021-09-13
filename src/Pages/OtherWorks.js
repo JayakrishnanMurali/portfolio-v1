@@ -4,14 +4,13 @@ import posts from "../data/Posts";
 import Title from "../Components/Title";
 import { MainLayout, InnerLayout } from "../styles/Layouts";
 import PrimaryButton from "../Components/PrimaryButton";
-import { ArrowForward } from "@material-ui/icons";
 
 function OtherWorks() {
   return (
     <MainLayout>
       <OtherWorksStyled>
         <Title title={"Other Works"} span={"Works"} />
-        <InnerLayout className="post">
+        <InnerLayout className={"post"}>
           {posts.map((post) => {
             return (
               <div key={post.id} className="post-item">
