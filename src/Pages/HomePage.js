@@ -1,7 +1,9 @@
 import { Facebook, GitHub, Instagram } from "@material-ui/icons";
 import React from "react";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import Particle from "../Components/Particle";
+import PrimaryButton from "../Components/PrimaryButton";
 
 function HomePage() {
   return (
@@ -14,6 +16,13 @@ function HomePage() {
           Hi I'm <span>Jayakrishnan</span>
         </h1>
         <p>I build things for the web.</p>
+
+        <div className="action-button">
+          <NavLink to="/contact">
+            <PrimaryButton title={"Let's Talk"} />
+          </NavLink>
+        </div>
+
         <div className="icons">
           <a
             target="_blank"
@@ -64,6 +73,9 @@ const HomePageStyled = styled.header`
     text-align: center;
     width: 80%;
 
+    .action-button {
+      margin: 2rem;
+    }
     .icons {
       display: flex;
       justify-content: center;

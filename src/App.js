@@ -1,8 +1,15 @@
 import React from "react";
+import { Switch } from "react-router-dom";
+import { Route } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 import styled from "styled-components";
 import Sidebar from "./Components/Sidebar";
 import HomePage from "./Pages/HomePage";
+import AboutPage from "./Pages/AboutPage";
+import ResumePage from "./Pages/ResumePage";
+import ProjectsPage from "./Pages/ProjectsPage";
+import BlogsPage from "./Pages/BlogsPage";
+import ContactPage from "./Pages/ContactPage";
 
 function App() {
   return (
@@ -17,7 +24,26 @@ function App() {
             <div className="line-4"></div>
           </div>
 
-          <HomePage />
+          <Switch>
+            <Route path="/" exact>
+              <HomePage />
+            </Route>
+            <Route path="/about" exact>
+              <AboutPage />
+            </Route>
+            <Route path="/projects" exact>
+              <ProjectsPage />
+            </Route>
+            <Route path="/resume" exact>
+              <ResumePage />
+            </Route>
+            <Route path="/blogs" exact>
+              <BlogsPage />
+            </Route>
+            <Route path="/contact" exact>
+              <ContactPage />
+            </Route>
+          </Switch>
         </MainContentStyled>
       </BrowserRouter>
     </div>
