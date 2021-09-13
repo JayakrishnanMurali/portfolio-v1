@@ -68,10 +68,12 @@ const OtherWorksStyled = styled.div`
         height: 20rem;
         object-fit: cover;
         transition: all 0.4s ease-in-out;
+        filter: grayscale(1);
 
         &:hover {
           cursor: pointer;
-          transform: rotate(2deg) scale(1.1);
+          transform: rotate(1.1deg) scale(1.1);
+          filter: grayscale(0);
         }
       }
     }

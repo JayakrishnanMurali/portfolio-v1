@@ -1,4 +1,4 @@
-import { Facebook, GitHub, Instagram } from "@material-ui/icons";
+import { GitHub, Instagram, LinkedIn } from "@material-ui/icons";
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
@@ -27,10 +27,10 @@ function HomePage() {
           <a
             target="_blank"
             rel="noreferrer"
-            href="https://www.facebook.com/profile.php?id=100009589212408"
-            className="icon i-facebook"
+            href="https://www.linkedin.com/in/jayakrishnan-m-a8501b1b4/"
+            className="icon i-linkedIn"
           >
-            <Facebook />
+            <LinkedIn />
           </a>
           <a
             target="_blank"
