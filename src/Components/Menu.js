@@ -43,19 +43,45 @@ const MenuStyled = styled.div`
     background-color: var(--background-dark-grey);
     padding: 2rem;
     border-radius: 4px;
-
-    &:not(:last-child) {
-      margin-bottom: 3rem;
+    margin-bottom: 3rem;
+    @media screen and (max-width: 960px) {
+      width: 100%;
+      padding: 1rem;
+      height: 90%;
+    }
+    @media screen and (max-width: 700px) {
+      width: 100%;
+      padding: 1rem;
+      height: 90%;
+    }
+    @media screen and (max-width: 540px) {
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      height: 90%;
     }
     .portfolio-content {
       position: relative;
+
       p {
         font-size: 0.918rem;
         margin-top: 0.4rem;
+        @media screen and (max-width: 700px) {
+          font-size: 0.9rem;
+        }
+        @media screen and (max-width: 540px) {
+          font-size: 0.718rem;
+        }
       }
       h6 {
         font-size: 1.5rem;
         margin-top: 0.2rem;
+        @media screen and (max-width: 700px) {
+          font-size: 1.2rem;
+        }
+        @media screen and (max-width: 540px) {
+          font-size: 0.918rem;
+        }
       }
       .portfolio-image {
         display: block;
@@ -73,6 +99,14 @@ const MenuStyled = styled.div`
           width: 100%;
           height: 70vh;
           object-fit: cover;
+          @media screen and (max-width: 960px) {
+            width: 100%;
+            height: 100%;
+          }
+          @media screen and (max-width: 700px) {
+            width: 100%;
+            height: 100%;
+          }
         }
         ul {
           transform: translateY(-100px);
@@ -102,7 +136,10 @@ const MenuStyled = styled.div`
             height: 4rem;
             margin: 0 0.7rem;
             transition: all 0.4s ease-in-out;
-
+            @media screen and (max-width: 540px) {
+              width: 3rem;
+              height: 3rem;
+            }
             &:hover {
               background-color: var(--primary-color);
             }
@@ -148,6 +185,9 @@ const MenuStyled = styled.div`
           }
           svg {
             font-size: 3rem;
+            @media screen and (max-width: 540px) {
+              font-size: 2rem;
+            }
           }
         }
         &::before {

@@ -13,6 +13,7 @@ function Title({ title, span }) {
 
 const TitleStyled = styled.div`
   position: relative;
+
   h2 {
     color: var(--white-color);
     font-size: 3.1rem;
@@ -20,6 +21,10 @@ const TitleStyled = styled.div`
     text-transform: uppercase;
     position: relative;
     padding-bottom: 0.7rem;
+
+    @media screen and (max-width: 540px) {
+      font-size: 1.5rem;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -49,6 +54,10 @@ const TitleStyled = styled.div`
       left: 0;
       top: 30%;
       z-index: -1;
+      @media screen and (max-width: 540px) {
+        font-size: 1.5rem;
+        left: 14px;
+      }
     }
   }
 `;

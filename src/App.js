@@ -17,15 +17,30 @@ import { Close } from "@material-ui/icons";
 function App() {
   const [navToggle, setNavToggle] = useState(false);
 
+  const menuButtonClick = () => {
+    var menuBar = document.getElementById("menuBtn");
+    var close = document.getElementById("closeBtn");
+
+    setNavToggle(!navToggle);
+
+    if (navToggle === false) {
+      close.style.display = "block";
+      menuBar.style.display = "none";
+    } else {
+      close.style.display = "none";
+      menuBar.style.display = "block";
+    }
+  };
+
   return (
     <AppStyled className="App">
       <BrowserRouter>
         <Sidebar navToggle={navToggle} />
 
         <div className="ham-burger-menu">
-          <IconButton onClick={() => setNavToggle(!navToggle)}>
+          <IconButton onClick={menuButtonClick}>
             <MenuIcon id="menuBtn" />
-            <Close id="closeBtn" />
+            <Close id="closeBtn" style={{ display: "none" }} />
           </IconButton>
         </div>
 

@@ -24,6 +24,18 @@ const ButtonStyled = styled.button`
   color: var(--white-color);
   transition: all 0.4s ease-in-out;
   cursor: pointer;
+  @media screen and (max-width: 700px) {
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+  }
+  @media screen and (max-width: 960px) {
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+  }
+  @media screen and (max-width: 540px) {
+    padding: 0.4rem 1rem;
+    font-size: 1rem;
+  }
   &:active,
   &:focus {
     background-color: var(--primary-color);

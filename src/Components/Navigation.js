@@ -97,6 +97,11 @@ const NavigationStyled = styled.nav`
       border-radius: 50%;
       border: 8px solid var(--border-color);
     }
+    @media screen and (max-width: 540px) {
+      img {
+        width: 50%;
+      }
+    }
   }
 
   .nav-items {

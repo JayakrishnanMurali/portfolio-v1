@@ -22,6 +22,11 @@ const SidebarStyled = styled.div`
     transform: translateX(-100%);
     z-index: 100;
   }
+  @media screen and (max-width: 700px) {
+    width: 80%;
+    transform: translateX(-100%);
+    z-index: 100;
+  }
   @media screen and (max-width: 540px) {
     width: 100%;
     transform: translateX(-100%);

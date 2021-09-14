@@ -71,6 +71,18 @@ const ImageSectionStyled = styled.div`
         width: 70%;
         height: 27rem;
       }
+      @media screen and (max-width: 960px) {
+        width: 80%;
+        height: 25rem;
+      }
+      @media screen and (max-width: 700px) {
+        width: 80%;
+        height: 19rem;
+      }
+      @media screen and (max-width: 540px) {
+        width: 75%;
+        height: 12rem;
+      }
     }
     .img-border {
       width: 30%;
@@ -86,6 +98,18 @@ const ImageSectionStyled = styled.div`
         height: 27rem;
         left: 60px;
       }
+      @media screen and (max-width: 960px) {
+        width: 80%;
+        height: 25rem;
+      }
+      @media screen and (max-width: 700px) {
+        width: 80%;
+        height: 19rem;
+      }
+      @media screen and (max-width: 540px) {
+        width: 75%;
+        height: 12rem;
+      }
     }
   }
   .left-content {
@@ -98,6 +122,23 @@ const ImageSectionStyled = styled.div`
         margin-left: 2rem;
         font-size: 1.3rem;
         font-weight: 200;
+      }
+      @media screen and (max-width: 960px) {
+        width: 90%;
+        font-size: 1rem;
+      }
+
+      @media screen and (max-width: 700px) {
+        width: 82%;
+        font-size: 0.918rem;
+        padding: 0.1rem 0;
+        word-spacing: 2px;
+      }
+      @media screen and (max-width: 540px) {
+        width: 80%;
+        font-size: 0.818rem;
+        padding: 0.1rem 0;
+        word-spacing: 2px;
       }
       .flex {
         display: flex;
@@ -116,6 +157,15 @@ const ImageSectionStyled = styled.div`
           @media screen and (max-width: 1200px) {
             font-size: 1.2rem;
           }
+          @media screen and (max-width: 960px) {
+            font-size: 1rem;
+          }
+          @media screen and (max-width: 700px) {
+            font-size: 0.968rem;
+          }
+          @media screen and (max-width: 540px) {
+            font-size: 0.718rem;
+          }
 
           span {
             color: var(--font-light-color);
@@ -123,6 +173,15 @@ const ImageSectionStyled = styled.div`
 
             @media screen and (max-width: 1200px) {
               font-size: 1.2rem;
+            }
+            @media screen and (max-width: 960px) {
+              font-size: 0.968rem;
+            }
+            @media screen and (max-width: 700px) {
+              font-size: 0.918rem;
+            }
+            @media screen and (max-width: 540px) {
+              font-size: 0.718rem;
             }
           }
         }
