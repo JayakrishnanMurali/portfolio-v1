@@ -54,8 +54,12 @@ span{
     color: var(--primary-color);
 }
 
+h2,h3,h4,h5,h6{
+    color: var(--white-color);
+}
+
 .utility-marbottom{
-    margin-bottom: 3rem;
+    margin-bottom: 3.5rem;
 }
 
 `;

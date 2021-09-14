@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Skills from "../Components/Skills";
 import WorkExperience from "../Components/WorkExperience";
-import { MainLayout, InnerLayout } from "../styles/Layouts";
+import { MainLayout } from "../styles/Layouts";
 import PrimaryButton from "../Components/PrimaryButton";
 
 function ResumePage() {
