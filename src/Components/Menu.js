@@ -14,12 +14,12 @@ function Menu({ menuItem }) {
                 <img src={item.image} alt="" />
                 <ul>
                   <li>
-                    <a href={item.gitLink}>
+                    <a href={item.gitLink} target="_blank" rel="noreferrer">
                       <GitHub />
                     </a>
                   </li>
                   <li>
-                    <a href={item.appLink}>
+                    <a href={item.appLink} target="_blank" rel="noreferrer">
                       <Language />
                     </a>
                   </li>
@@ -71,23 +71,21 @@ const MenuStyled = styled.div`
           object-fit: cover;
         }
         ul {
-          display: none;
           transform: translateY(-100px);
           transition: all 0.4s ease-in-out;
-        }
-      }
-      .portfolio-image:hover {
-        ul {
-          transform: translateY(0);
-          display: block;
           position: absolute;
           left: 50%;
           top: 50%;
-          transform: translate(-50%, -50%);
+          opacity: 0;
           display: flex;
           list-style: none;
           align-items: center;
           justify-content: center;
+
+          svg {
+            font-size: 3rem;
+          }
+
           li {
             background-color: var(--border-color);
             display: flex;
@@ -99,6 +97,32 @@ const MenuStyled = styled.div`
             width: 4rem;
             height: 4rem;
             margin: 0 0.7rem;
+            transition: all 0.4s ease-in-out;
+
+            &:hover {
+              background-color: var(--primary-color);
+            }
+
+            a {
+              display: flex;
+              list-style: none;
+              align-items: center;
+              justify-content: center;
+              transition: all 0.4s ease-in-out;
+            }
+          }
+        }
+      }
+      .portfolio-image:hover {
+        ul {
+          transform: translateY(0);
+          transform: translate(-50%, -50%);
+          display: flex;
+          list-style: none;
+          align-items: center;
+          justify-content: center;
+          opacity: 1;
+          li {
             transition: all 0.4s ease-in-out;
 
             &:hover {
