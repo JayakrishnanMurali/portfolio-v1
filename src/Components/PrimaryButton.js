@@ -18,6 +18,7 @@ const PrimaryButtonStyled = styled.a`
   @media screen and (max-width: 540px) {
     font-size: 0.918rem;
     padding: 0.6rem 2rem;
+    /* margin-top: 1rem; */
   }
 
   &:after {

@@ -17,6 +17,9 @@ const SmallTitleStyled = styled.div`
     padding-right: 1rem;
     svg {
       font-size: 3rem;
+      @media screen and (max-width: 560px) {
+        font-size: 2rem;
+      }
     }
   }
   h3 {
