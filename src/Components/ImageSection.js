@@ -50,6 +50,15 @@ const ImageSectionStyled = styled.div`
   display: flex;
   margin-top: 5rem;
   position: relative;
+
+  @media screen and (max-width: 1200px) {
+    flex-direction: column-reverse;
+    gap: 2rem;
+    .right-content {
+      margin-bottom: 2rem;
+      width: 100%;
+    }
+  }
   .right-content {
     width: 100%;
     margin-left: 2rem;
@@ -57,6 +66,11 @@ const ImageSectionStyled = styled.div`
       width: 70%;
       height: 13rem;
       object-fit: cover;
+
+      @media screen and (max-width: 1200px) {
+        width: 70%;
+        height: 27rem;
+      }
     }
     .img-border {
       width: 30%;
@@ -66,12 +80,25 @@ const ImageSectionStyled = styled.div`
       top: 25px;
       border: 2px solid var(--primary-color);
       position: absolute;
+
+      @media screen and (max-width: 1200px) {
+        width: 70%;
+        height: 27rem;
+        left: 60px;
+      }
     }
   }
   .left-content {
     .paragraph {
       padding: 0.5rem 0;
       font-size: 0.868rem;
+
+      @media screen and (max-width: 1200px) {
+        width: 90%;
+        margin-left: 2rem;
+        font-size: 1.3rem;
+        font-weight: 200;
+      }
       .flex {
         display: flex;
         align-items: center;
@@ -86,9 +113,17 @@ const ImageSectionStyled = styled.div`
           list-style: circle;
           color: var(--primary-color);
 
+          @media screen and (max-width: 1200px) {
+            font-size: 1.2rem;
+          }
+
           span {
             color: var(--font-light-color);
             font-size: 0.768rem;
+
+            @media screen and (max-width: 1200px) {
+              font-size: 1.2rem;
+            }
           }
         }
       }

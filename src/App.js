@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Switch } from "react-router-dom";
 import { Route } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
@@ -10,12 +10,25 @@ import ResumePage from "./Pages/ResumePage";
 import ProjectsPage from "./Pages/ProjectsPage";
 import ContactPage from "./Pages/ContactPage";
 import OtherWorks from "./Pages/OtherWorks";
+import MenuIcon from "@material-ui/icons/Menu";
+import { IconButton } from "@material-ui/core";
+import { Close } from "@material-ui/icons";
 
 function App() {
+  const [navToggle, setNavToggle] = useState(false);
+
   return (
-    <div className="App">
+    <AppStyled className="App">
       <BrowserRouter>
-        <Sidebar />
+        <Sidebar navToggle={navToggle} />
+
+        <div className="ham-burger-menu">
+          <IconButton onClick={() => setNavToggle(!navToggle)}>
+            <MenuIcon id="menuBtn" />
+            <Close id="closeBtn" />
+          </IconButton>
+        </div>
+
         <MainContentStyled>
           {/* <div className="lines">
             <div className="line-1"></div>
@@ -46,14 +59,30 @@ function App() {
           </Switch>
         </MainContentStyled>
       </BrowserRouter>
-    </div>
+    </AppStyled>
   );
 }
+
+const AppStyled = styled.div`
+  .ham-burger-menu {
+    display: none;
+    z-index: 1000;
+  }
+  @media screen and (max-width: 1300px) {
+    .ham-burger-menu {
+      display: block;
+    }
+  }
+`;
 
 const MainContentStyled = styled.main`
   position: relative;
   margin-left: 16.3rem;
   min-height: 100vh;
+
+  @media screen and (max-width: 1300px) {
+    margin-left: 0;
+  }
 
   /* .lines {
     position: absolute;

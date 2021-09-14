@@ -15,6 +15,11 @@ const PrimaryButtonStyled = styled.a`
   position: relative;
   transition: all 0.4s ease-in-out;
 
+  @media screen and (max-width: 540px) {
+    font-size: 0.918rem;
+    padding: 0.6rem 2rem;
+  }
+
   &:after {
     content: "";
     position: absolute;

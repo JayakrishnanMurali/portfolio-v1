@@ -66,6 +66,34 @@ const HomePageStyled = styled.header`
   }
 
   .typography {
+    @media screen and (max-width: 960px) {
+      h1 {
+        margin-bottom: 1rem;
+      }
+    }
+    @media screen and (max-width: 700px) {
+      h1 {
+        font-size: 2.6rem;
+        span {
+          font-size: 3.4rem;
+        }
+      }
+      p {
+        font-size: 1.1rem;
+      }
+    }
+    @media screen and (max-width: 540px) {
+      h1 {
+        font-size: 1.6rem;
+        span {
+          font-size: 2rem;
+        }
+      }
+      p {
+        font-size: 0.818rem;
+      }
+    }
+
     position: absolute;
     top: 50%;
     left: 50%;
@@ -80,6 +108,13 @@ const HomePageStyled = styled.header`
       display: flex;
       justify-content: center;
       margin-top: 1rem;
+      @media screen and (max-width: 540px) {
+        .icon {
+          svg {
+            font-size: 1.2rem;
+          }
+        }
+      }
       .icon {
         border: 2px solid var(--border-color);
         display: flex;

@@ -113,6 +113,24 @@ h2,h3,h4,h5,h6{
     margin-bottom: 3.5rem;
 }
 
+// Nav Menu Bar
+.ham-burger-menu{
+position: absolute;
+right: 5%;
+top: 5%;
+z-index: 15;
+svg{
+    font-size: 2rem;
+}
+}
+.nav-toggle{
+    transform: translateX(0);
+    z-index: 100;
+
+}
+
+
+
 `;
 
 export default GlobalStyle;
