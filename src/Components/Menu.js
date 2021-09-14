@@ -40,6 +40,10 @@ const MenuStyled = styled.div`
   grid-template-columns: repeat(1, 1fr);
 
   .grid-item {
+    background-color: var(--background-dark-grey);
+    padding: 2rem;
+    border-radius: 4px;
+
     &:not(:last-child) {
       margin-bottom: 3rem;
     }

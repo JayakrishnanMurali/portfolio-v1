@@ -1,9 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import avatar from "../img/avatar-3.jpg";
+import { Switch } from "@material-ui/core";
 
 function Navigation() {
+  const [theme, setTheme] = useState("dark-theme");
+  const [checked, setChecked] = useState(false);
+
+  useEffect(() => {
+    document.documentElement.className = theme;
+  }, [theme]);
+
+  const themeToggle = () => {
+    if (theme === "light-theme") {
+      setTheme("dark-theme");
+      setChecked(false);
+    } else {
+      setTheme("light-theme");
+      setChecked(true);
+    }
+  };
+
   return (
     <NavigationStyled>
       <div className="avatar">
@@ -43,7 +61,17 @@ function Navigation() {
       </ul>
 
       <footer className="footer">
-        <p>&#169; 2021 Portfolio -v1</p>
+        <div className="d-dark">
+          <p>Change Theme</p>
+
+          <Switch
+            value=""
+            checked={checked}
+            size="medium"
+            onClick={themeToggle}
+            inputProps={{ "aria-label": "" }}
+          />
+        </div>
       </footer>
     </NavigationStyled>
   );
@@ -113,13 +141,20 @@ const NavigationStyled = styled.nav`
   }
 
   footer {
-    text-align: center;
+    /* text-align: center; */
     border-top: 1px solid var(--border-color);
     width: 100%;
+
+    .d-dark {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.51rem;
+    }
     p {
       padding: 1rem 0;
-      font-size: 0.75rem;
-      display: block;
+      font-size: 0.85rem;
+      /* display: block; */
     }
   }
 `;
