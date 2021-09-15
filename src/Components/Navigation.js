@@ -22,6 +22,8 @@ function Navigation() {
     }
   };
 
+  const closeNavBar = () => {};
+
   return (
     <NavigationStyled>
       <div className="avatar">

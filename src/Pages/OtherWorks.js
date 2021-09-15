@@ -48,6 +48,15 @@ const OtherWorksStyled = styled.div`
     grid-column-gap: 2rem;
     grid-row-gap: 2rem;
 
+    @media screen and (max-width: 540px) {
+      grid-template-columns: repeat(1, 1fr);
+      margin: 2rem 0;
+    }
+
+    @media screen and (max-width: 700px) {
+      grid-template-columns: repeat(1, 1fr);
+      margin: 2rem 0;
+    }
     .post-item {
       background-color: var(--background-dark-grey);
     }
@@ -69,6 +78,10 @@ const OtherWorksStyled = styled.div`
         object-fit: cover;
         transition: all 0.4s ease-in-out;
         filter: grayscale(1);
+
+        @media screen and (max-width: 540px) {
+          height: 15rem;
+        }
 
         &:hover {
           cursor: pointer;

@@ -18,7 +18,7 @@ function ContactPage() {
       <Title title={"Contact"} span={"Contact"} />
       <ContactPageStyled>
         <InnerLayout className={"contact-section"}>
-          <div className="left-content">
+          <div className="lefts-content">
             <form className="form">
               <div className="form-field">
                 <label htmlFor="name">Enter your name*</label>
@@ -41,12 +41,12 @@ function ContactPage() {
                   rows="10"
                 ></textarea>
               </div>
-              <div className="form-field">
+              <div className="form-field center-button">
                 <PrimaryButton title={"SEND EMAIL"} />
               </div>
             </form>
           </div>
-          <div className="right-content">
+          <div className="rights-content">
             <ContactItem
               icon={phone}
               title={"Phone"}
@@ -76,13 +76,43 @@ const ContactPageStyled = styled.section`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 2rem;
-
-    .right-content {
+    .lefts-content {
+      @media screen and (max-width: 540px) {
+        width: 100%;
+      }
+    }
+    @media screen and (max-width: 540px) {
+      width: 70%;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    @media screen and (max-width: 700px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    @media screen and (max-width: 960px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .rights-content {
       display: flex;
       flex-direction: column;
+
+      @media screen and (max-width: 540px) {
+        width: 100%;
+      }
     }
     .form {
       width: 100%;
+      @media screen and (max-width: 540px) {
+        width: 100%;
+      }
+      .center-button {
+        @media screen and (max-width: 700px) {
+          text-align: center;
+        }
+        @media screen and (max-width: 960px) {
+          text-align: center;
+        }
+      }
+
       .form-field {
         margin-top: 2rem;
         width: 100%;
@@ -95,7 +125,9 @@ const ContactPageStyled = styled.section`
           font-size: 0.918rem;
           display: inline-block;
           background-color: var(--background-dark-color);
-          padding: inherit.4rem 0.5rem;
+          @media screen and (max-width: 540px) {
+            font-size: 0.718rem;
+          }
         }
         input {
           border: 1px solid var(--border-color);
@@ -113,6 +145,9 @@ const ContactPageStyled = styled.section`
           color: inherit;
           width: 100%;
           padding: 0.8rem 1rem;
+          @media screen and (max-width: 540px) {
+            height: 9rem;
+          }
         }
       }
     }

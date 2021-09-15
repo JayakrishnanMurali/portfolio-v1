@@ -23,6 +23,11 @@ const ContactItemSTyled = styled.div`
   align-items: center;
   margin-top: 2rem;
 
+  @media screen and (max-width: 540px) {
+    height: 7rem;
+    padding: 0.9rem;
+  }
+
   .left-content {
     padding: 1rem;
     border: 1px solid var(--border-color);
@@ -30,8 +35,17 @@ const ContactItemSTyled = styled.div`
     align-items: center;
     justify-content: center;
     margin-right: 1.5rem;
+
+    @media screen and (max-width: 540px) {
+      padding: 0.3rem;
+    }
+
     svg {
       font-size: 2rem;
+      @media screen and (max-width: 540px) {
+        font-size: 1rem;
+        padding: 0;
+      }
     }
   }
   .right-content {
@@ -39,10 +53,16 @@ const ContactItemSTyled = styled.div`
       color: var(--white-color);
       font-size: 0.918rem;
       padding-bottom: 0.6rem;
+      @media screen and (max-width: 540px) {
+        font-size: 0.818rem;
+      }
     }
     p {
       font-size: 1rem;
       padding: 0.1rem 0;
+      @media screen and (max-width: 540px) {
+        font-size: 0.718rem;
+      }
     }
   }
 `;
