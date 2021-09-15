@@ -4,7 +4,7 @@ import Navigation from "./Navigation";
 
 function Sidebar({ navToggle }) {
   return (
-    <SidebarStyled className={`${navToggle ? "nav-toggle" : ""}`}>
+    <SidebarStyled className={`${navToggle ? "nav-toggle" : ""}`} id="sidebar">
       <Navigation></Navigation>
     </SidebarStyled>
   );

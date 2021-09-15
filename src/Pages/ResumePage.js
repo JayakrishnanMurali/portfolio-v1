@@ -4,6 +4,7 @@ import Skills from "../Components/Skills";
 import WorkExperience from "../Components/WorkExperience";
 import { MainLayout } from "../styles/Layouts";
 import PrimaryButton from "../Components/PrimaryButton";
+import resume from "../img/Resume.docx";
 
 function ResumePage() {
   return (
@@ -11,7 +12,9 @@ function ResumePage() {
       <MainLayout>
         <Skills />
         <div className="dwnldCVbtn">
-          <PrimaryButton title={"DOWNLOAD RESUME"} />
+          <a href={resume} download>
+            <PrimaryButton title={"DOWNLOAD RESUME"} />
+          </a>
         </div>
         <WorkExperience />
       </MainLayout>

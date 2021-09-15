@@ -62,6 +62,9 @@ const ImageSectionStyled = styled.div`
   .right-content {
     width: 100%;
     margin-left: 2rem;
+    @media screen and (max-width: 540px) {
+      margin-left: 0;
+    }
     img {
       width: 70%;
       height: 13rem;
