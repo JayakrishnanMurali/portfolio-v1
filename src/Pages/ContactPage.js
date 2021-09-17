@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Title from "../Components/Title";
 import { MainLayout, InnerLayout } from "../styles/Layouts";
@@ -7,11 +7,40 @@ import ContactItem from "../Components/ContactItem";
 import PhoneIcon from "@material-ui/icons/Phone";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import EmailIcon from "@material-ui/icons/Email";
+import emailjs from "emailjs-com";
+
+const Result = () => {
+  return alert(
+    "Your message has been successfully sent. I will contact you soon."
+  );
+};
 
 function ContactPage() {
   const phone = <PhoneIcon />;
   const location = <LocationOnIcon />;
   const emailVar = <EmailIcon />;
+
+  const [result, setResult] = useState(false);
+
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_b8o4con",
+        "template_b9xlebz",
+        e.target,
+        "user_w6sa2QfenZgqD6aOvsf9n"
+      )
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => console.log(err));
+
+    setResult(true);
+    e.target.reset();
+    setResult(false);
+  }
 
   return (
     <MainLayout>
@@ -19,31 +48,35 @@ function ContactPage() {
       <ContactPageStyled>
         <InnerLayout className={"contact-section"}>
           <div className="lefts-content">
-            <form className="form">
+            <form className="form" onSubmit={sendEmail}>
               <div className="form-field">
                 <label htmlFor="name">Enter your name*</label>
-                <input type="text" id="name" />
+                <input type="text" id="name" name="user_name" />
               </div>
               <div className="form-field">
                 <label htmlFor="email">Enter your email*</label>
-                <input type="email" id="email" />
+                <input type="email" id="email" name="user_email" />
               </div>
               <div className="form-field">
-                <label htmlFor="subject">Enter your subject</label>
+                <label htmlFor="subject" name="subject">
+                  Enter your subject
+                </label>
                 <input type="subject" id="subject" />
               </div>
               <div className="form-field">
                 <label htmlFor="textarea">Enter your Message*</label>
                 <textarea
-                  name="textarea"
+                  name="message"
                   id="textarea"
                   cols="30"
                   rows="10"
                 ></textarea>
               </div>
-              <div className="form-field center-button">
+              <button type="submit" className=" btn form-field center-button">
                 <PrimaryButton title={"SEND EMAIL"} />
-              </div>
+              </button>
+
+              <div className="row">{result ? <Result /> : null}</div>
             </form>
           </div>
           <div className="rights-content">
@@ -112,7 +145,11 @@ const ContactPageStyled = styled.section`
           text-align: center;
         }
       }
-
+      .btn {
+        background-color: transparent;
+        border: none;
+        outline: none;
+      }
       .form-field {
         margin-top: 2rem;
         width: 100%;
@@ -137,6 +174,12 @@ const ContactPageStyled = styled.section`
           width: 100%;
           padding: 0 15px;
           color: inherit;
+          @media screen and (max-width: 700px) {
+            font-size: 1rem;
+          }
+          @media screen and (max-width: 700px) {
+            font-size: 0.918rem;
+          }
         }
         textarea {
           background: transparent;
